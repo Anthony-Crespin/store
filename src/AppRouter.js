@@ -5,7 +5,7 @@ import ClienteRouter from './components/cliente/ClienteRouter'
 const AppRouter = () => {
     return (
         <Router>
-            <Route exact path="/" component={ClienteRouter} />
+            <Route exact path="/store" component={ClienteRouter} />
         </Router>
     )
 }

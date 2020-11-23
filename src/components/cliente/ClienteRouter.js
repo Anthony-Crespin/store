@@ -13,14 +13,14 @@ const ClienteRouter = () => {
     return (
         <>
             <Router>
-                <Route exact path="/" component={MainCliente} />
-                <Route exact path="/tienda" component={Tienda} />
-                <Route exact path="/contacto" component={Contacto} />
-                <Route exact path="/login" component={Login} />
-                <Route exact path="/producto" component={ProductoSingle} />
-                <Route exact path="/carrito" component={Carrito} />
-                <Route exact path="/registro" component={Registro} />
-                <Route exact path="/resetpass" component={ResetPass} />
+                <Route exact path="/store/" component={MainCliente} />
+                <Route exact path="/store/tienda" component={Tienda} />
+                <Route exact path="/store/contacto" component={Contacto} />
+                <Route exact path="/store/login" component={Login} />
+                <Route exact path="/store/producto" component={ProductoSingle} />
+                <Route exact path="/store/carrito" component={Carrito} />
+                <Route exact path="/store/registro" component={Registro} />
+                <Route exact path="/store/resetpass" component={ResetPass} />
             </Router>
         </>
     )
