@@ -1,23 +1,35 @@
 {
   "files": {
-    "main.css": "/store/static/css/main.8c8b27cf.chunk.css",
-    "main.js": "/store/static/js/main.94332cbf.chunk.js",
-    "main.js.map": "/store/static/js/main.94332cbf.chunk.js.map",
-    "runtime-main.js": "/store/static/js/runtime-main.4cc50623.js",
-    "runtime-main.js.map": "/store/static/js/runtime-main.4cc50623.js.map",
-    "static/js/2.1e32aeed.chunk.js": "/store/static/js/2.1e32aeed.chunk.js",
-    "static/js/2.1e32aeed.chunk.js.map": "/store/static/js/2.1e32aeed.chunk.js.map",
-    "static/js/3.6f66ce41.chunk.js": "/store/static/js/3.6f66ce41.chunk.js",
-    "static/js/3.6f66ce41.chunk.js.map": "/store/static/js/3.6f66ce41.chunk.js.map",
+    "main.css": "/store/static/css/main.07b6ee7d.chunk.css",
+    "main.js": "/store/static/js/main.9f5b4467.chunk.js",
+    "main.js.map": "/store/static/js/main.9f5b4467.chunk.js.map",
+    "runtime-main.js": "/store/static/js/runtime-main.2c1f4651.js",
+    "runtime-main.js.map": "/store/static/js/runtime-main.2c1f4651.js.map",
+    "static/css/2.f70698f4.chunk.css": "/store/static/css/2.f70698f4.chunk.css",
+    "static/js/2.a938d8af.chunk.js": "/store/static/js/2.a938d8af.chunk.js",
+    "static/js/2.a938d8af.chunk.js.map": "/store/static/js/2.a938d8af.chunk.js.map",
     "index.html": "/store/index.html",
-    "static/css/main.8c8b27cf.chunk.css.map": "/store/static/css/main.8c8b27cf.chunk.css.map",
-    "static/js/2.1e32aeed.chunk.js.LICENSE.txt": "/store/static/js/2.1e32aeed.chunk.js.LICENSE.txt",
-    "static/media/logo.6ce24c58.svg": "/store/static/media/logo.6ce24c58.svg"
+    "static/css/2.f70698f4.chunk.css.map": "/store/static/css/2.f70698f4.chunk.css.map",
+    "static/css/main.07b6ee7d.chunk.css.map": "/store/static/css/main.07b6ee7d.chunk.css.map",
+    "static/js/2.a938d8af.chunk.js.LICENSE.txt": "/store/static/js/2.a938d8af.chunk.js.LICENSE.txt",
+    "static/media/catCpu.599883d1.png": "/store/static/media/catCpu.599883d1.png",
+    "static/media/catHeadphones.3df86384.png": "/store/static/media/catHeadphones.3df86384.png",
+    "static/media/catImpresoras.42c5c93a.png": "/store/static/media/catImpresoras.42c5c93a.png",
+    "static/media/catMochilas.64c05522.png": "/store/static/media/catMochilas.64c05522.png",
+    "static/media/catMonitor.c99b5d41.png": "/store/static/media/catMonitor.c99b5d41.png",
+    "static/media/catParlantes.99846fc6.png": "/store/static/media/catParlantes.99846fc6.png",
+    "static/media/celular.0018f1f8.png": "/store/static/media/celular.0018f1f8.png",
+    "static/media/contacto.d2fe75e7.svg": "/store/static/media/contacto.d2fe75e7.svg",
+    "static/media/laptop.a0d93615.png": "/store/static/media/laptop.a0d93615.png",
+    "static/media/mouse.9e6d5d1a.png": "/store/static/media/mouse.9e6d5d1a.png",
+    "static/media/teclado.c1f1c8d7.png": "/store/static/media/teclado.c1f1c8d7.png",
+    "static/media/tienda.7df47127.svg": "/store/static/media/tienda.7df47127.svg"
   },
   "entrypoints": [
-    "static/js/runtime-main.4cc50623.js",
-    "static/js/2.1e32aeed.chunk.js",
-    "static/css/main.8c8b27cf.chunk.css",
-    "static/js/main.94332cbf.chunk.js"
+    "static/js/runtime-main.2c1f4651.js",
+    "static/css/2.f70698f4.chunk.css",
+    "static/js/2.a938d8af.chunk.js",
+    "static/css/main.07b6ee7d.chunk.css",
+    "static/js/main.9f5b4467.chunk.js"
   ]
 }
