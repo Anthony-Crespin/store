@@ -19,7 +19,7 @@ const HeaderCliente = () => {
                         </div>
 
                         <div className="nav--logo">
-                            <Link to="/" className="scroll-link">TecStore</Link>
+                            <Link to="/store" className="scroll-link">TecStore</Link>
                         </div>
 
                         <div className={menuMovil ? 'nav--menu open' : 'nav--menu'} id="navMenu">
@@ -32,22 +32,22 @@ const HeaderCliente = () => {
 
                             <ul className="nav--list">
                                 <li className="nav--item">
-                                    <Link to="/" className="nav--link scroll-link">Inicio</Link>
+                                    <Link to="/store/" className="nav--link scroll-link">Inicio</Link>
                                 </li>
                                 <li className="nav--item">
-                                    <Link to="/tienda" className="nav--link scroll-link">Tienda</Link>
+                                    <Link to="/store/tienda" className="nav--link scroll-link">Tienda</Link>
                                 </li>
                                 <li className="nav--item">
-                                    <Link to="/contacto" className="nav--link scroll-link">Contacto</Link>
+                                    <Link to="/store/contacto" className="nav--link scroll-link">Contacto</Link>
                                 </li>
                             </ul>
                         </div>
 
                          <div className="nav--icons">
-                            <Link to="/login" className="icon--item">
+                            <Link to="/store/login" className="icon--item">
                                 <AiOutlineUser fontSize="1.6rem"/>
                             </Link>
-                            <Link to="/carrito" className="icon--item">
+                            <Link to="/store/carrito" className="icon--item">
                                 <AiOutlineShoppingCart fontSize="1.6rem"/>
                                 <span id="cartTotal">0</span>
                             </Link>

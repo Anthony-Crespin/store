@@ -15,7 +15,7 @@ export const Carrito = () => {
             <div className="contenedor">
                 <div className="carrito-vacio">
                     <h6>NO TIENE NINGUN PRODUCTO AGREGADO AL CARRITO DE COMPRAS!!</h6>
-                    <Link to="/tienda">Ir a comprar -></Link>
+                    <Link to="/store/tienda">Ir a comprar -></Link>
                 </div>
 
                 <div className="carrito__container">
@@ -39,12 +39,12 @@ export const Carrito = () => {
                                <tbody className="cart__tbody">
                                    <tr>
                                         <td className="cart__imagen">
-                                            <Link to="/producto">
+                                            <Link to="/store/producto">
                                                 <img src={mouse} alt="" loading="lazy" />
                                             </Link>
                                             <div className="cart__detalles">
                                                 <span>MARCA</span>
-                                                <Link to="/producto">Nombre completo del producto a comprar</Link>
+                                                <Link to="/store/producto">Nombre completo del producto a comprar</Link>
                                                 <span><b>SKU:</b> ######</span>
                                             </div>
                                         </td>

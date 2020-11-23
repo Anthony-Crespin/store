@@ -34,7 +34,7 @@ const SliderGlide = () => {
                                     <span>Nueva inspiración 2020</span>
                                     <h1>HECHO A TU MEDIDA</h1>
                                     <p>Laptop hecha para los trabajos mas realizados del hogar.</p>
-                                    <Link to="/tienda"><button className="hero__btn">EXPLORAR TIENDA</button></Link>
+                                    <Link to="/store/tienda"><button className="hero__btn">EXPLORAR TIENDA</button></Link>
                                 </div>
                                 <div className="hero__right">
                                     <div className="hero__img-container">
@@ -49,7 +49,7 @@ const SliderGlide = () => {
                                     <span>Nueva inspiración 2020</span>
                                     <h1>HECHO A TU MEDIDA</h1>
                                     <p>Laptop hecha para los trabajos mas realizados del hogar.</p>
-                                    <Link to=""><button className="hero__btn">EXPLORAR TIENDA</button></Link>
+                                    <Link to="/store/tienda"><button className="hero__btn">EXPLORAR TIENDA</button></Link>
                                 </div>
                                 <div className="hero__right">
                                     <div className="hero__img-container">
@@ -64,7 +64,7 @@ const SliderGlide = () => {
                                     <span>Nueva inspiración 2020</span>
                                     <h1>HECHO A TU MEDIDA</h1>
                                     <p>Laptop hecha para los trabajos mas realizados del hogar.</p>
-                                    <Link to=""><button className="hero__btn">EXPLORAR TIENDA</button></Link>
+                                    <Link to="/store/tienda"><button className="hero__btn">EXPLORAR TIENDA</button></Link>
                                 </div>
                                 <div className="hero__right">
                                     <div className="hero__img-container">
@@ -79,7 +79,7 @@ const SliderGlide = () => {
                                     <span>Nueva inspiración 2020</span>
                                     <h1>HECHO A TU MEDIDA</h1>
                                     <p>Laptop hecha para los trabajos mas realizados del hogar.</p>
-                                    <Link to=""><button className="hero__btn">EXPLORAR TIENDA</button></Link>
+                                    <Link to="/store/tienda"><button className="hero__btn">EXPLORAR TIENDA</button></Link>
                                 </div>
                                 <div className="hero__right">
                                     <div className="hero__img-container">

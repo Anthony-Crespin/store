@@ -45,7 +45,7 @@ const Tienda = () => {
                                 </div>
                                 <div className="producto2__precio">
                                     <h4>S/. 200</h4>
-                                    <Link to="/producto">
+                                    <Link to="/store/producto">
                                         <button type="button" className="producto2__btn">Ver detalles</button>
                                     </Link>
                                 </div>
@@ -66,7 +66,7 @@ const Tienda = () => {
                                 </div>
                                 <div className="producto2__precio">
                                     <h4>S/. 200</h4>
-                                    <Link to="/producto">
+                                    <Link to="/store/producto">
                                         <button type="button" className="producto2__btn">Ver detalles</button>
                                     </Link>
                                 </div>
@@ -87,7 +87,7 @@ const Tienda = () => {
                                 </div>
                                 <div className="producto2__precio">
                                     <h4>S/. 200</h4>
-                                    <Link to="/producto">
+                                    <Link to="/store/producto">
                                         <button type="button" className="producto2__btn">Ver detalles</button>
                                     </Link>
                                 </div>
@@ -108,7 +108,7 @@ const Tienda = () => {
                                 </div>
                                 <div className="producto2__precio">
                                     <h4>S/. 200</h4>
-                                    <Link to="/producto">
+                                    <Link to="/store/producto">
                                         <button type="button" className="producto2__btn">Ver detalles</button>
                                     </Link>
                                 </div>

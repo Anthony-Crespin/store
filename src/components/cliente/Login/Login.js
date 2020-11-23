@@ -30,13 +30,13 @@ const Login = () => {
                                 <button type="button" className="ver__pas"><FaEye/></button>
                             </div>
                             <div className="form__detalles">
-                                <p><Link to="/resetpass">¿Olvidaste tu contraseña?</Link></p>
+                                <p><Link to="/store/resetpass">¿Olvidaste tu contraseña?</Link></p>
                                 <input type="checkbox" id="recordarAceptar" />
                                 <label for="recordarAceptar">Recordar contraseña</label>
                             </div>
                             <input type="submit" value="Iniciar sesión"/>
                         </form>
-                        <p>¿Aun no tienes una cuenta? <Link to="/registro">Crea una cuenta aquí</Link></p>
+                        <p>¿Aun no tienes una cuenta? <Link to="/store/registro">Crea una cuenta aquí</Link></p>
                     </div>
                 </div>
                 

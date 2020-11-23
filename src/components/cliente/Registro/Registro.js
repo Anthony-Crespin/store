@@ -47,7 +47,7 @@ const Registro = () => {
                             </div>
                             <input type="submit" value="Registrar"/>
                         </form>
-                        <p>¿Ya tienes una cuenta? <Link to="/login">Accede aquí</Link></p>
+                        <p>¿Ya tienes una cuenta? <Link to="/store/login">Accede aquí</Link></p>
                     </div>
                 </div>
                 

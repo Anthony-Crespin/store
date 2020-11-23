@@ -13,7 +13,7 @@ const ClienteRouter = () => {
     return (
         <>
             <Router>
-                <Route exact path="/store/" component={MainCliente} />
+                <Route exact path="/store" component={MainCliente} />
                 <Route exact path="/store/tienda" component={Tienda} />
                 <Route exact path="/store/contacto" component={Contacto} />
                 <Route exact path="/store/login" component={Login} />
