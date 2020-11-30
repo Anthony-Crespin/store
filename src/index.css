@@ -84,6 +84,14 @@ h2{
     padding: 0 1.6rem;
 }
 
+.contenedor__admin{
+    width: 100%;
+    max-width: 140rem;
+    margin: 0 auto;
+    padding: 0 1.6rem;
+}
+
+
 /* 
 ===============
 NAVEGACION
@@ -162,6 +170,7 @@ NAVEGACION
     border: 1px solid var(--black);
     border-radius: 50%;
     transition: all 300ms ease-in-out;
+    cursor: pointer;
 }
 
 .nav--icons .icon--item:not(:last-child){
@@ -1111,4 +1120,328 @@ footer{
     padding: 2rem 0;
     text-align: center;
     margin-top: 4rem;
+}
+/* 
+===============
+HEADER DEL ADMIN
+===============
+ */
+.nav__admin{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 7rem;
+    width: 100%;
+    padding: 0 1rem;
+}
+
+.nav__logo-admin{
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+
+.logo__admin{
+    font-size: 3rem;
+    font-weight: 700;
+    line-height: 0px;
+    margin-right: 6rem;
+}
+
+.nav--icons h3{
+    display: block;
+    margin-right: 2rem;
+}
+/* 
+===============
+BANNER DEL ADMIN
+===============
+ */
+.banner__admin{
+    width: 100%;
+    height: 20rem;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.banner__admin::before{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-image: linear-gradient(to right, rgba(255,128,0,.7), rgba(0,0,128,.7));
+    z-index: 3;
+}
+
+.banner__admin img{
+    width: 100%;
+    display: block;
+    z-index: 2;
+}
+
+/* 
+===============
+ESTADISTICAS DEL ADMIN
+===============
+ */
+.estadisticas{
+    margin-top: 3rem;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.card__stat{
+    width: 22%;
+    height: 10rem;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+    color: var(--white);
+    cursor: default;
+}
+
+.card__stat:nth-child(1){
+    background-color: skyblue;
+}
+
+.card__stat:nth-child(2){
+    background-color: darkorange;
+}
+
+.card__stat:nth-child(3){
+    background-color: darkmagenta;
+}
+
+.card__stat:nth-child(4){
+    background-color: cyan;
+}
+
+.card__left{
+    width: 80%;
+    font-weight: 600;
+    font-size: 1.5rem;
+    padding-top: .5rem;
+}
+
+.card__left span{
+    font-size: 3rem;
+    display: block;
+    margin-top: -1rem;
+}
+
+.card__right{
+    width: 20%;
+}
+
+.card__right span{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.card__right span::before{
+    content: "";
+    position: absolute;
+    display: block;
+    width: 5rem;
+    height: 5rem;
+    border-radius: 50%;
+    transform: scale(0);
+    transition: all 300ms ease-in-out;
+}
+
+.card__stat:hover .card__right span::before{
+    transform: scale(1);
+    background: rgba(255,255,255,.5);
+}
+
+.card__right span svg{
+    font-size: 2.4rem;
+    fill: var(--white);
+}
+
+/* 
+===============
+CATEGORIAS DEL ADMIN
+===============
+ */
+.admin__main-flex{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 3rem;
+    margin-bottom: 4rem;
+}
+
+.categorias{
+    width: 34%;
+}
+
+.add__cat,
+.list__categorias{
+    width: 100%;
+    background-color: var(--primarycolor);
+    border-radius: 5px;
+    padding: 1.2rem;
+    margin-bottom: 3rem;
+}
+
+.add__header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: 700;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: var(--black2);
+    fill: var(--black2);
+}
+
+.add__form input[type="text"]{
+    width: 100%;
+    border: none;
+    font-size: 1.5rem;
+    color: var(--black3);
+    padding: .6rem;
+    outline: none;
+    border: 1px solid transparent;
+    border-radius: 5px;
+    margin-bottom: 1rem;
+}
+
+.add__form input[type="text"]:focus{
+    border: 1px solid var(--orange);
+}
+
+.add_image{
+    width: 100%;
+    position: relative;
+    margin: 3rem 0 7rem;
+}
+
+.add_image input[type="file"]{
+    display: none;
+}
+
+.add_image label svg{
+    margin-right: 1rem;
+    font-size: 2rem;
+}
+
+.add_image label{
+    color: var(--white);
+    width: 100%;
+    height: 5rem;
+    background-color: var(--orange);
+    position: absolute;
+    margin: auto;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    font-size: 1.6rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.add__form button{
+    width: 100%;
+    padding: 1rem;
+    border: 2px solid transparent;
+    outline: none;
+    background-color: dodgerblue;
+    color: var(--white);
+    font-size: 1.6rem;
+    font-weight: 600;
+    border-radius: 5px;
+    transition: all 300ms ease;
+    cursor: pointer;
+}
+
+.add__form button:hover{
+    border: 2px solid dodgerblue;
+    background-color: transparent;
+    color: dodgerblue;
+}
+/* 
+===============
+PRODUCTOS DEL ADMIN
+===============
+ */
+.productos__admin{
+    width: 64%;
+}
+
+.add__prodAdmin{    
+    background-color: var(--primarycolor);
+    border-radius: 5px;
+    padding: 1.2rem;
+    margin-bottom: 3rem;
+}
+
+.add__prodBox{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.add__prodBox input[type="text"],
+.add__prodBox input[type="number"]{
+    padding: 1rem;
+    color: var(--black4);
+    outline: none;
+    border-radius: 5px;
+    border: 1px solid transparent;
+    transition: all ease 300ms;
+}
+
+.add__prodBox input[type="text"]{
+    width: 78%;
+    font-weight: 600;
+    font-size: 1.8rem;
+}
+
+.add__prodBox input[type="number"]{
+    width: 20%;
+}
+
+.add__prodBox input[type="text"]:focus,
+.add__prodBox input[type="number"]:focus,
+.add__prodBox textarea:focus{
+    border: 1px solid slateblue;
+}
+
+.add__prodBox select{
+    width: 30%;
+    padding: 1rem;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.5rem;
+    color: var(--black4);
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.add__prodBox textarea{
+    max-width: 100%;
+    min-width: 100%;
+    color: var(--black4);
+    font-family: 'Poppins', sans-serif;
+    padding: 1rem;
+    border-radius: 5px;
+    border: 1px solid transparent;
+    transition: all ease 300ms;
 }

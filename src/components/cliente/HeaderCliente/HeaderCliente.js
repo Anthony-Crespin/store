@@ -19,7 +19,7 @@ const HeaderCliente = () => {
                         </div>
 
                         <div className="nav--logo">
-                            <Link to="/store" className="scroll-link">TecStore</Link>
+                            <Link to="/store" className="scroll-link">E-Store</Link>
                         </div>
 
                         <div className={menuMovil ? 'nav--menu open' : 'nav--menu'} id="navMenu">
