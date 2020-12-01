@@ -6,7 +6,7 @@ const AdminRouter = () => {
     return (
         <>
             <Router>
-                <Route exact path="/admin" component={AdminMain} />
+                <Route exact path="/store/admin" component={AdminMain} />
             </Router>
         </>
     )

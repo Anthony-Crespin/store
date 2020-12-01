@@ -7,7 +7,7 @@ const AppRouter = () => {
     return (
         <Router>
             <Route exact path="/store" component={ClienteRouter} />
-            <Route exact path="/admin" component={AdminRouter} />
+            <Route exact path="/store/admin" component={AdminRouter} />
         </Router>
     )
 }
