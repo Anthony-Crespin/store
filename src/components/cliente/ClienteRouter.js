@@ -1,5 +1,6 @@
 import React from 'react'
 import {BrowserRouter as Router, Route} from 'react-router-dom'
+import TiendaState from '../../context/tienda/tiendaState'
 import { Carrito } from './Carrito/Carrito'
 import Contacto from './Contacto/Contacto'
 import Login from './Login/Login'
@@ -12,6 +13,7 @@ import Tienda from './Tienda/Tienda'
 const ClienteRouter = () => {
     return (
         <>
+        <TiendaState>
             <Router>
                 <Route exact path="/store" component={MainCliente} />
                 <Route exact path="/store/tienda" component={Tienda} />
@@ -22,6 +24,7 @@ const ClienteRouter = () => {
                 <Route exact path="/store/registro" component={Registro} />
                 <Route exact path="/store/resetpass" component={ResetPass} />
             </Router>
+        </TiendaState>
         </>
     )
 }

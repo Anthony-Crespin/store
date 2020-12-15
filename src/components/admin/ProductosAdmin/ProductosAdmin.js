@@ -1,4 +1,4 @@
-import React, {forwardRef} from 'react'
+import React, {forwardRef, useEffect} from 'react'
 import {HiViewGridAdd} from 'react-icons/hi'
 import MaterialTable from 'material-table'
 import AddBox from '@material-ui/icons/AddBox';
@@ -38,6 +38,16 @@ const ProductosAdmin = () => {
         ThirdStateCheck: forwardRef((props, ref) => <Remove {...props} ref={ref} />),
         ViewColumn: forwardRef((props, ref) => <ViewColumn {...props} ref={ref} />)
       };
+
+    const urlApiProductos = 'https://shopcodigo.herokuapp.com/List_All_Products/'
+    const fetchApi = async() => {
+        const response = await fetch(urlApiProductos)
+        console.log(response.statusText);
+    }
+
+    useEffect(() => {
+        fetchApi()
+    }, [])
 
     const data = [
         {id: 1, nombreProd: 'Cartuchos de tintas', categoria: 'impresoras', precio: 'S/. 45.00', inventario: 'Disponible'},
@@ -87,7 +97,7 @@ const ProductosAdmin = () => {
                         </div>
                         <div className="add__prodBox">
                             <input type="file" />
-                            <select>
+                            <select value="">
                                 <option disabled selected>Elige una categoría</option>
                                 <option value="">Laptos</option>
                                 <option value="">Cpus</option>

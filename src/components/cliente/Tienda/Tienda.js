@@ -1,14 +1,44 @@
-import React from 'react'
+import React, {useContext, useEffect, useState} from 'react'
 import { Link } from 'react-router-dom'
 import HeaderCliente from '../HeaderCliente/HeaderCliente'
-import catCpu from '../../../imagenes/catCpu.png'
-import catMochilas from '../../../imagenes/catMochilas.png'
-import catHeadphones from '../../../imagenes/catHeadphones.png'
-import catMonitor from '../../../imagenes/catMonitor.png'
-import {FaStar} from 'react-icons/fa'
+/* import {FaStar} from 'react-icons/fa' */
 import FooterCliente from '../FooterCliente/FooterCliente'
+import { getCategorias } from '../../../services/categoriasServices'
+import TiendaContext from '../../../context/tienda/tiendaContext'
+import { getProductos } from '../../../services/productosServices'
 
 const Tienda = () => {
+
+    const {globalCategoria, seleccionarCategoriaGlobal} = useContext(TiendaContext)
+
+    //Trayendo todas las categorías
+    const [categorias, setCategorias] = useState([])
+
+    const traerCategorias = async () => {
+        const data = await getCategorias()
+        setCategorias(data)
+    }
+
+    useEffect(() => {
+        traerCategorias()
+    }, [])
+
+    //Trayendo todos los productos
+    const [productos, setProductos] = useState([])
+
+    const traerProductos = async () => {
+        const data = await getProductos()
+        setProductos(data)
+    }
+
+    useEffect(() => {
+        traerProductos()
+    }, [])
+
+    /* const { globalCategory } = useContext(TiendaContext); */
+
+    
+
     return (
         <>
             <HeaderCliente/>
@@ -20,100 +50,89 @@ const Tienda = () => {
                             <h4>CATEGORÍAS</h4>
                         </div>
                         <ul>
-                            <li><Link to="#">Cat 1</Link></li>
-                            <li><Link to="#">Cat 2</Link></li>
-                            <li><Link to="#">Cat 3</Link></li>
-                            <li><Link to="#">Cat 4</Link></li>
-                            <li><Link to="#">Cat 5</Link></li>
-                            <li><Link to="#">Cat 6</Link></li>
+                            {
+                                categorias.map(objCategoria => {
+                                    return (
+                                    <li key={objCategoria.pk} onClick={()=>{
+                                        seleccionarCategoriaGlobal(objCategoria)
+                                    }}>
+                                        <Link to="#">
+                                            {objCategoria.name}
+                                            <span>{objCategoria.product.length}</span>
+                                        </Link>
+                                    </li>
+                                    )
+                                })
+                            }
                         </ul>
                     </aside>
 
                     <main className="tienda__productos">
-                        <div className="producto2">
-                            <div className="producto2__header">
-                                <img src={catCpu} alt="" loading="lazy"/>
-                            </div>
-                            <div className="producto2__footer">
-                                <h3>Case ultima generacion</h3>
-                                <div className="rating2">
-                                    <FaStar/>
-                                    <FaStar/>
-                                    <FaStar/>
-                                    <FaStar/>
-                                    <FaStar/>
-                                </div>
-                                <div className="producto2__precio">
-                                    <h4>S/. 200</h4>
-                                    <Link to="/store/producto">
-                                        <button type="button" className="producto2__btn">Ver detalles</button>
-                                    </Link>
-                                </div>
-                            </div>
-                        </div>
-                        <div className="producto2">
-                            <div className="producto2__header">
-                                <img src={catMonitor} alt="" loading="lazy"/>
-                            </div>
-                            <div className="producto2__footer">
-                                <h3>Case ultima generacion</h3>
-                                <div className="rating2">
-                                    <FaStar/>
-                                    <FaStar/>
-                                    <FaStar/>
-                                    <FaStar/>
-                                    <FaStar/>
-                                </div>
-                                <div className="producto2__precio">
-                                    <h4>S/. 200</h4>
-                                    <Link to="/store/producto">
-                                        <button type="button" className="producto2__btn">Ver detalles</button>
-                                    </Link>
-                                </div>
-                            </div>
-                        </div>
-                        <div className="producto2">
-                            <div className="producto2__header">
-                                <img src={catMochilas} alt="" loading="lazy"/>
-                            </div>
-                            <div className="producto2__footer">
-                                <h3>Case ultima generacion</h3>
-                                <div className="rating2">
-                                    <FaStar/>
-                                    <FaStar/>
-                                    <FaStar/>
-                                    <FaStar/>
-                                    <FaStar/>
-                                </div>
-                                <div className="producto2__precio">
-                                    <h4>S/. 200</h4>
-                                    <Link to="/store/producto">
-                                        <button type="button" className="producto2__btn">Ver detalles</button>
-                                    </Link>
-                                </div>
-                            </div>
-                        </div>
-                        <div className="producto2">
-                            <div className="producto2__header">
-                                <img src={catHeadphones} alt="" loading="lazy"/>
-                            </div>
-                            <div className="producto2__footer">
-                                <h3>Case ultima generacion</h3>
-                                <div className="rating2">
-                                    <FaStar/>
-                                    <FaStar/>
-                                    <FaStar/>
-                                    <FaStar/>
-                                    <FaStar/>
-                                </div>
-                                <div className="producto2__precio">
-                                    <h4>S/. 200</h4>
-                                    <Link to="/store/producto">
-                                        <button type="button" className="producto2__btn">Ver detalles</button>
-                                    </Link>
-                                </div>
-                            </div>
-                        </div>
+                        {
+                            globalCategoria ? globalCategoria.product.map(objProducto => {
+                                return (
+                                    <div className="producto2" key={objProducto.pk} objProducto={objProducto}>
+                                        <div className="producto2__header">
+                                            {
+                                                objProducto.photos.map(objProdPhoto => {
+                                                    return (
+                                                        <img src={objProdPhoto.image} alt={objProdPhoto.name} loading="lazy"/>
+                                                    )
+                                                })
+                                            }
+                                        </div>
+                                        <div className="producto2__footer">
+                                            <h3>{objProducto.name}</h3>
+                                            {/* <div className="rating2">
+                                                <FaStar/>
+                                                <FaStar/>
+                                                <FaStar/>
+                                                <FaStar/>
+                                                <FaStar/>
+                                            </div> */}
+                                            <div className="producto2__precio">
+                                                <h4>S/. {objProducto.price}</h4>
+                                                <Link to="/store/producto">
+                                                    <button type="button" className="producto2__btn">Ver detalles</button>
+                                                </Link>
+                                            </div>
+                                        </div>
+                                    </div>
+                                )
+                            }) : 
+                            productos.map(objProducto => {
+                                return (
+                                    <div className="producto2" key={objProducto.pk} objProducto={objProducto}>
+                                        <div className="producto2__header">
+                                            {
+                                                objProducto.photos.map(objProdPhoto => {
+                                                    return (
+                                                        <img src={objProdPhoto.image} alt={objProdPhoto.name} loading="lazy"/>
+                                                    )
+                                                })
+                                            }
+                                        </div>
+                                        <div className="producto2__footer">
+                                            <h3>{objProducto.name}</h3>
+                                            {/* <div className="rating2">
+                                                <FaStar/>
+                                                <FaStar/>
+                                                <FaStar/>
+                                                <FaStar/>
+                                                <FaStar/>
+                                            </div> */}
+                                            <div className="producto2__precio">
+                                                <h4>S/. {objProducto.price}</h4>
+                                                <Link to="/store/producto">
+                                                    <button type="button" className="producto2__btn">Ver detalles</button>
+                                                </Link>
+                                            </div>
+                                        </div>
+                                    </div>
+                                )
+                            })
+                        }
+                        
                     </main>
                 </div>
             </div>
